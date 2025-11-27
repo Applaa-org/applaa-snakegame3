@@ -1,0 +1,33 @@
+{
+  "game": {
+    "name": "SnakeGame3",
+    "type": "2D",
+    "genre": "arcade",
+    "description": "A classic snake game where the player grows by eating food and must avoid walls and their own tail."
+  },
+  "settings": {
+    "window": { "width": 800, "height": 600 },
+    "physics": { "gravity": 0 }
+  },
+  "player": {
+    "name": "Snake",
+    "speed": 1,
+    "abilities": ["move", "grow"]
+  },
+  "entities": {
+    "enemies": [],
+    "collectibles": [
+      { "name": "Food", "value": 10 }
+    ]
+  },
+  "levels": [
+    { "name": "Main Level", "background": "dark_green", "obstacles": ["wall", "self"] }
+  ],
+  "logic": {
+    "winCondition": "reach_score_100",
+    "loseCondition": "hit_wall_or_self",
+    "scoring": {
+      "pointsPerCollectible": 10
+    }
+  }
+}
